@@ -23,6 +23,10 @@ void setup() {
 void loop() {
   // Read rotary dial state
   int rotaryState = digitalRead(rotaryPin);
+  if (digitalRead(7) == HIGH) {
+        Serial.println("LaunchRocket");
+        delay(200); // Debounce delay
+    }
   if (rotaryState == LOW) {
     pulseCount++; // Increment pulse count on pulse
     lastPulseTime = millis(); // Record time of last pulse
@@ -57,24 +61,39 @@ void loop() {
 
     // Print the detected number if valid
     if (dialedNumber != -1) {
-        Serial.print("You have dialed: ");
-        Serial.println(dialedNumber);
-        
-        // Add the action for number 0
-        if (dialedNumber == 0) {
-            Serial.println("RotateEarth"); // Send the message to Unity
-            // Actuon when number 1 pressed
-        } else if (dialedNumber == 1) {
+    Serial.print("You have dialed: ");
+    Serial.println(dialedNumber);
+
+    // Add actions for each number
+    if (dialedNumber == 0) {
+        Serial.println("RotateEarth"); // Message for Unity
+    } else if (dialedNumber == 1) {
         Serial.println("RotateMars"); // Message for Unity
+    } else if (dialedNumber == 2) {
+        Serial.println("RotateSun"); // Message for Unity
+    } else if (dialedNumber == 3) {
+        Serial.println("RotateMercury"); // Message for Unity
+    } else if (dialedNumber == 4) {
+        Serial.println("RotateVenus"); // Message for Unity
+    } else if (dialedNumber == 5) {
+        Serial.println("RotateJupiter"); // Message for Unity
+    } else if (dialedNumber == 6) {
+        Serial.println("RotateSaturn"); // Message for Unity
+    } else if (dialedNumber == 7) {
+        Serial.println("RotateUranus"); // Message for Unity
+    } else if (dialedNumber == 8) {
+        Serial.println("RotateNeptune"); // Message for Unity
+    } else if (dialedNumber == 9) {
+        Serial.println("RotateMoon"); // Message for Unity
     } else {
         Serial.println("Error: Invalid pulse count!");
-    }
     }
 
     // Reset counters for the next dial
     pulseCount = 0; 
     dialing = false; 
   }
+}
 
   // Check Button C and play a ringing sound
   if (digitalRead(buttonC) == HIGH) {
