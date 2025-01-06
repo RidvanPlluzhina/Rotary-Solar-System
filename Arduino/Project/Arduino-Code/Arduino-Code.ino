@@ -23,8 +23,14 @@ void setup() {
 void loop() {
   // Read rotary dial state
   int rotaryState = digitalRead(rotaryPin);
+  // Start the call button
   if (digitalRead(7) == HIGH) {
         Serial.println("LaunchRocket");
+        delay(200); // Debounce delay
+    }
+  // Stop the call button
+  if (digitalRead(6) == LOW) {
+        Serial.println("StopEverything");
         delay(200); // Debounce delay
     }
   if (rotaryState == LOW) {
