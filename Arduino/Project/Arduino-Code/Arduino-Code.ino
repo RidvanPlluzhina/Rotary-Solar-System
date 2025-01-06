@@ -72,28 +72,29 @@ void loop() {
 
     // Add actions for each number
     if (dialedNumber == 0) {
-        Serial.println("RotateEarth"); // Message for Unity
+      Serial.println("Earth"); // Message for Unity
     } else if (dialedNumber == 1) {
-        Serial.println("RotateMars"); // Message for Unity
+      Serial.println("Mars"); // Message for Unity
     } else if (dialedNumber == 2) {
-        Serial.println("RotateSun"); // Message for Unity
+      Serial.println("Sun"); // Message for Unity
     } else if (dialedNumber == 3) {
-        Serial.println("RotateMercury"); // Message for Unity
+      Serial.println("Mercury"); // Message for Unity
     } else if (dialedNumber == 4) {
-        Serial.println("RotateVenus"); // Message for Unity
+      Serial.println("Venus"); // Message for Unity
     } else if (dialedNumber == 5) {
-        Serial.println("RotateJupiter"); // Message for Unity
+      Serial.println("Jupiter"); // Message for Unity
     } else if (dialedNumber == 6) {
-        Serial.println("RotateSaturn"); // Message for Unity
+      Serial.println("Saturn"); // Message for Unity
     } else if (dialedNumber == 7) {
-        Serial.println("RotateUranus"); // Message for Unity
+      Serial.println("Uranus"); // Message for Unity
     } else if (dialedNumber == 8) {
-        Serial.println("RotateNeptune"); // Message for Unity
+      Serial.println("Neptune"); // Message for Unity
     } else if (dialedNumber == 9) {
-        Serial.println("RotateMoon"); // Message for Unity
+      Serial.println("Moon"); // Message for Unity
     } else {
-        Serial.println("Error: Invalid pulse count!");
-    }
+      Serial.println("Error: Invalid pulse count!");
+}
+
 
     // Reset counters for the next dial
     pulseCount = 0; 
