@@ -98,6 +98,16 @@ Ensure MP3 files are named in sequence (`0001.mp3`, `0002.mp3`, etc.) and stored
 
 ---
 
+## 🌌 Unity Visualization
+
+![image](https://github.com/user-attachments/assets/7370e5bd-960e-4fb2-8004-79404bb58eea)
+![image](https://github.com/user-attachments/assets/18d8c701-0c8d-42b5-8288-8f92362e2cf1)
+![image](https://github.com/user-attachments/assets/bde72d57-ba99-42d2-9d1f-ab23c8b55276)
+![image](https://github.com/user-attachments/assets/ad8c42dc-fdb6-434b-95df-fbfd0a065d8a)
+![image](https://github.com/user-attachments/assets/09355251-ac35-4ffc-94cd-3406de085eba)
+
+---
+
 ## 📚 Future Enhancements
 
 - Expand Unity visualizations with more interactive features.
@@ -116,3 +126,9 @@ Special thanks to:
 ## 👨‍🎓 Contributor
 
 This project was developed by **Ridvan Plluzhina**, a student at the **Free University of Bolzano/Bozen**, Faculty of Engineering.
+
+
+
+
+
+
