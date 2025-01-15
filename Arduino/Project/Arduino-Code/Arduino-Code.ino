@@ -1,5 +1,6 @@
-#include <DFRobotDFPlayerMini.h>
+// Libraries for DFPlayer Mini and software serial communication.
 
+#include <DFRobotDFPlayerMini.h>
 #include "SoftwareSerial.h"
 #include "DFRobotDFPlayerMini.h"
 
@@ -14,12 +15,12 @@ bool buttonDState = false;       // Tracks the current state of the button
 bool lastButtonDState = false;  // Tracks the previous state of the button
 
 SoftwareSerial mySerial(10, 11); // RX, TX
-DFRobotDFPlayerMini myDFPlayer;
+DFRobotDFPlayerMini myDFPlayer; // Object to control the DFPlayer Mini module.
 
 void setup() {
-  pinMode(rotaryPin, INPUT_PULLUP); 
-  pinMode(buttonC, INPUT);
-  pinMode(buttonD, INPUT);
+  pinMode(rotaryPin, INPUT_PULLUP); // Set rotaryPin as an input with an internal pull-up resistor. Is set to INPUT_PULLUP, so it reads HIGH when the circuit is open.
+  pinMode(buttonC, INPUT); // Set as input for detecting button presses.
+  pinMode(buttonD, INPUT); // Set as input for detecting button presses.
 
   Serial.begin(9600); 
   Serial.println("Setup complete. Dial a number...");
@@ -30,7 +31,7 @@ void setup() {
     Serial.println("DFPlayer Mini initialization failed!");
     while (true); 
   }
-  myDFPlayer.volume(30); 
+  myDFPlayer.volume(30); // Volume for speaker
   Serial.println("MP3 Sound generating ready...");
 }
 
@@ -42,7 +43,7 @@ void loop() {
   if (digitalRead(buttonC) == HIGH) {
     Serial.println("LaunchRocket");
     myDFPlayer.play(1); 
-    delay(200); // Debounce delay
+    delay(200); 
   }
   
   // Check if buttonD is pressed (falling edge detection)
