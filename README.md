@@ -62,6 +62,7 @@ Unity enhances the experience with animations, audio synchronization, and dynami
 - Arduino IDE
 - DFPlayer Mini library ([Download here](https://github.com/DFRobot/DFRobotDFPlayerMini))
 - Unity 3D (for visualizing the solar system)
+- To fully experience this project, you can use the Unity 3D world available at: https://github.com/RidvanPlluzhina/SolarSystem3DWorld. This project can be used on its own or integrated with the Unity world to display animations corresponding to each dialed number.
 
 ---
 
